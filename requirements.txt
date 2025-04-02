@@ -1,0 +1,11 @@
+ipykernel
+python-dotenv
+pandas
+numpy
+matplotlib
+seaborn
+tabulate
+scikit-learn
+xgboost
+imblearn
+flask

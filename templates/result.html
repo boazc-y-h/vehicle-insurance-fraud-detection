@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Prediction Result</h2>
+    <p>The model predicts: <strong style="color: {% if prediction == 'Fraudulent' %}red{% else %}green{% endif %};">
+        {{ prediction }}
+    </strong></p>
+
+    <h3>Submitted Data</h3>
+    <h4>Accident Details</h4>
+    <table>
+        {% for key, value in accident_details.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h4>Claim Details</h4>
+    <table>
+        {% for key, value in claim_details.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>Details Retrieved from Policy Number</h3>
+    <h4>Policy Details</h4>
+    <table>
+        {% for key, value in policy_dict.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h4>Policy Holder Details</h4>
+    <table>
+        {% for key, value in policy_holder.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h4>Vehicle Details</h4>
+    <table>
+        {% for key, value in vehicle_details.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h4>Agent Details</h4>
+    <table>
+        {% for key, value in agent_details.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">Go Back</a>
+</body>
+</html>

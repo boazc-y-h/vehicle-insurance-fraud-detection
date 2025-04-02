@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Claim Form</title>
+</head>
+<body>
+    <h2>Insurance Claim Form</h2>
+    <form action="{{ url_for('predict') }}" method="post">
+        <div>
+            <h3>Claimant Details</h3>
+            <label>Policy Number:</label>
+            <input type="number" name="PolicyNumber" id="PolicyNumber" min="1" max="15420" required><br>
+        </div>
+
+        <div>
+            <h3>Accident Details</h3>
+
+            <label>Year:</label>
+            <input type="number" name="Year" min="1994" max="1996" required><br>
+
+            <label>Month:</label>
+            <select name="Month" required>
+                <option value="" style="display:none">Select...</option>
+                <option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option>
+                <option>May</option><option>Jun</option><option>Jul</option><option>Aug</option>
+                <option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option>
+            </select><br>
+
+            <label>Week of Month:</label>
+            <input type="number" name="WeekOfMonth" min="1" max="5" required><br>
+
+            <label>Day of Week:</label>
+            <select name="DayOfWeek" required>
+                <option value="" style="display:none">Select...</option>
+                <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+                <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+            </select><br>
+
+            <!-- Days:Policy-Accident -->
+            <label for="Days:Policy-Accident">Days:Policy-Accident:</label>
+            <select name="Days:Policy-Accident" required>
+                <option value="" style="display:none">Select...</option>
+                <option>none</option>
+                <option>1 to 7</option>
+                <option>8 to 15</option>
+                <option>15 to 30</option>
+                <option>more than 30</option>
+            </select><br>
+
+            <!-- NumberOfCars -->
+            <label for="NumberOfCars">Number of Cars:</label>
+            <select name="NumberOfCars" required>
+                <option value="" style="display:none">Select...</option>
+                <option>1 vehicle</option>
+                <option>2 vehicles</option>
+                <option>3 to 4</option>
+                <option>5 to 8</option>
+                <option>more than 8</option>
+            </select><br>
+
+            <label>Accident Area:</label>
+            <select name="AccidentArea" required>
+                <option value="" style="display:none">Select...</option>
+                <option>Urban</option><option>Rural</option>
+            </select><br>
+            
+            <label>Fault:</label>
+            <select name="Fault" required>
+                <option value="" style="display:none">Select...</option>
+                <option>Policy Holder</option><option>Third Party</option>
+            </select><br>
+        </div>
+
+        <div>
+            <h3>Claim Details</h3>
+
+            <label>Week of Month Claimed:</label>
+            <input type="number" name="WeekOfMonthClaimed" min="1" max="5" required><br>
+
+            <label>Day of Week Claimed:</label>
+            <select name="DayOfWeekClaimed" required>
+                <option value="" style="display:none">Select...</option>
+                <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+                <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+            </select><br>
+
+            <label>Month Claimed:</label>
+            <select name="MonthClaimed" required>
+                <option value="" style="display:none">Select...</option>
+                <option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option>
+                <option>May</option><option>Jun</option><option>Jul</option><option>Aug</option>
+                <option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option>
+            </select><br>
+
+            <!-- Days:Policy-Claim -->
+            <label for="Days:Policy-Claim">Days:Policy-Claim:</label>
+            <select name="Days:Policy-Claim" required>
+                <option value="" style="display:none">Select...</option>
+                <option>8 to 15</option>
+                <option>15 to 30</option>
+                <option>more than 30</option>
+            </select><br>
+
+            <!-- PoliceReportFiled -->
+            <label for="PoliceReportFiled">Police Report Filed:</label>
+            <select name="PoliceReportFiled" required>
+                <option value="" style="display:none">Select...</option>
+                <option>No</option>
+                <option>Yes</option>
+            </select><br>
+            
+            <!-- WitnessPresent -->
+            <label for="WitnessPresent">Witness Present:</label>
+            <select name="WitnessPresent" required>
+                <option value="" style="display:none">Select...</option>
+                <option>No</option>
+                <option>Yes</option>
+            </select><br>
+
+            <!-- NumberOfSuppliments -->
+            <label for="NumberOfSuppliments">Number of Suppliments:</label>
+            <select name="NumberOfSuppliments" required>
+                <option value="" style="display:none">Select...</option>
+                <option>none</option>
+                <option>1 to 2</option>
+                <option>3 to 5</option>
+                <option>more than 5</option>
+            </select><br>            
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+</body>
+</html>

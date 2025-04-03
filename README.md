@@ -90,7 +90,10 @@ The important features identified in this project are in agreement with [Benedek
 
 ### Deployment
 
-A Flask web application was built to process user input and return predictions via a web interface. The application can be hosted locally by running [app.py](app.py), and it serves HTML pages with results. Additionally, it was also deployed as a web service via [Render](https://vehicle-insurance-fraud-detection-4w2k.onrender.com/).
+**Web Interface Link:** https://vehicle-insurance-fraud-detection-4w2k.onrender.com/
+
+A Flask web application was built to process user input and return predictions via a web interface, which serves HTML pages with results. This interface was deployed as a web service on [Render](https://vehicle-insurance-fraud-detection-4w2k.onrender.com/). Additionally, it can be hosted locally by running [app.py](app.py).
+
 Note: As the web service is run via Render's free instance, requests may be delayed by 50 seconds or more.
 
 <a href="https://vehicle-insurance-fraud-detection-4w2k.onrender.com/">
